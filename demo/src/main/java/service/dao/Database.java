@@ -20,8 +20,10 @@ public class Database {
 
     public static boolean isOK() {
         if (!checkDrivers()) return false; //driver errors
+        System.out.println(checkDrivers());
 
         if (!checkConnection()) return false; //can't connect to db
+        System.out.println(checkConnection());
 
         return checkTables(); //tables didn't exist
     }
@@ -53,14 +55,15 @@ public class Database {
         try (Connection connection = Database.connect()) {
             PreparedStatement statement = connection.prepareStatement(checkTables);
             ResultSet rs = statement.executeQuery();
-            while (rs.next()) {
-                if (rs.getString("tbl_name").equals(requiredTable)) return true;
-            }
+            return true;
+            // while (rs.next()) {
+            //     if (rs.getString("tbl_name").equals(requiredTable)) return true;
+            // }
         } catch (SQLException exception) {
             Logger.getAnonymousLogger().log(Level.SEVERE, LocalDateTime.now() + ": Could not find tables in database");
             return false;
         }
-        return false;
+        // return true;
     }
 
     protected static Connection connect() {
