@@ -1,0 +1,14 @@
+.button.transparent{
+    -fill: rgba(104, 104, 104, 0);
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-background-color: -fill;
+}
+.button:hover.transparent {
+    -fill: #7c46af7e;
+    -fx-text-fill: white;
+}
+.button:armed.transparent {
+    -fill: -secondary-armed;
+}
