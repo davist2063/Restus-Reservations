@@ -1,8 +1,6 @@
 # Restus-Reservations
 A software application to reserve vacation rooms
 
-Brief summary about the project: what and why are you making this; what are the technical things being used. This description can be same as the README file in the repo (see below for instructions).
-
 This project created allows any user to create and reserve vacation rooms. Essentially this software application is a miniature AirBnB app.
 
 I wanted to make this project in particular because it will challenge my understanding of using JavaFX alongside using a database to store information that is needed to be stored.
